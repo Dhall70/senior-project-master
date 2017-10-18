@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.seniorproject">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <!-- lists activitys the user will go through -->
+        <!-- currently the menu for track inspector is starting acitvity, will be changed for demo or later -->
+        <activity android:name=".MainActivityLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".TrackInspector.MapTI" />
+        <activity android:name=".TrackInspector.MenuTI"/>
+        <activity android:name=".GpsActivity"/>
+        <activity android:name=".MapsActivity"/>
+        <activity android:name=".TrackInspector.HeaderData" />
+        <activity android:name=".TrackInspector.InspectionForm" />
+        <activity android:name=".Manager.Manager" />
+        <activity android:name=".Admin.Admin" />
+        <activity android:name=".TrackInspector.FormatReport" />
+        <!-- api key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAN6gJht9ruOXe2A3y3rgsh5Xd2DuPyzuA" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+    </application>
+
+</manifest>
